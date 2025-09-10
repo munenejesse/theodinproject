@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+  <!-- Header -->
+  <h1 class="text-3xl font-bold mb-6">📚 My Library</h1>
+
+  <!-- New Book Button -->
+  <button id="newBookBtn" 
+    class="mb-6 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+    + New Book
+  </button>
+
+  <!-- Book Form (hidden by default) -->
+  <form id="bookForm" class="hidden mb-6 p-4 bg-white shadow-lg rounded-lg w-80">
+    <h2 class="text-xl font-semibold mb-4">Add a Book</h2>
+    
+    <input type="text" id="title" placeholder="Title" required
+      class="w-full mb-2 p-2 border rounded focus:ring-2 focus:ring-blue-300" />
+    
+    <input type="text" id="author" placeholder="Author" required
+      class="w-full mb-2 p-2 border rounded focus:ring-2 focus:ring-blue-300" />
+    
+    <input type="number" id="pages" placeholder="Pages" required
+      class="w-full mb-2 p-2 border rounded focus:ring-2 focus:ring-blue-300" />
+    
+    <label class="flex items-center mb-4 text-gray-700">
+      <input type="checkbox" id="read" class="mr-2" /> Already Read
+    </label>
+    
+    <button type="submit" 
+      class="w-full py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition">
+      Add Book
+    </button>
+  </form>
+
+  <!-- Book Display Area -->
+  <div id="library" 
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+  </div>
+
+  <script src="/src/main.js"></script>
+</body>
+</html>
