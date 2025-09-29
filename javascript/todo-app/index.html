@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo-app</title>
+  </head>
+  <body>
+    <h1>Todo App</h1>
+    <div id="sidebar">
+    <h2>Projects</h2>
+    <ul id="project-list"></ul>
+
+    <!-- Add Project Form -->
+    <form id="project-form">
+      <input type="text" id="project-name" placeholder="New Project" required />
+      <button type="submit">Add Project</button>
+    </form>
+    </div>
+    <div id="main">
+    <h2 id="selected-project-title">Todos</h2>
+    <div id="todo-list"></div>
+
+    <!-- Add Todo Form -->
+    <form id="todo-form">
+      <input type="text" id="todo-title" placeholder="Title" required />
+      <input type="text" id="todo-desc" placeholder="Description" />
+      <input type="date" id="todo-date" required />
+      <select id="todo-priority" required>
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit">Add Todo</button>
+    </form>
+  </div>   
+  <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
